@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from '../assets/background-herosection.png'; // Update with your actual image path
+import backgroundImage from '../assets/background-herosection1.png'; // Update with your actual image path
 
 const HeroSection = () => {
   return (
