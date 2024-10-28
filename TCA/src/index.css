@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* src/components/BrandPartners.css */
+
+.partners-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-row {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 100s linear infinite;
+  }
+  
+  .left-scroll {
+    animation-direction: normal; /* Scrolls left */
+  }
+  
+  .right-scroll {
+    animation-direction: reverse; /* Scrolls right */
+  }
+  
+  .partner-image {
+    width: 180px; /* Adjust based on your image size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 30px; /* Add space between images */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

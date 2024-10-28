@@ -25,7 +25,7 @@ export default function Component() {
                   <p className="text-gray-400 text-justify">
                     We bring together the best projects and leaders in the space to create courses. We are also building a powerful community, with our members at the center, for collective learning. You have a voice in our direction, and we actively uplift and elevate our members and facilitate peer-to-peer teaching and learning.
                   </p>
-                  <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+                  <button className="bg-[#21ca21] hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
                     Join Discord
                   </button>
                 </div>
@@ -34,7 +34,7 @@ export default function Component() {
                   <p className="text-gray-400 text-justify">
                     In Web3, experience is your ticket to a career. Our courses are designed to help you get there – a launchpad to your career. We bake in opportunities to build your personal presence and create a polished, Web3-specific portfolio. Leave our courses with provable skills, on-chain certification, and a digital footprint in the space.
                   </p>
-                  <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+                  <button className="bg-[#21ca21] hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
                     See Courses
                   </button>
                 </div>
