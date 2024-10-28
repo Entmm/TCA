@@ -1,11 +1,26 @@
 // src/components/BrandPartners.js
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import brandpartner from '../assets/tca-navigation.png';
+
 
 const BrandPartners = () => {
   // Define the partners array with image sources
   const partners = Array(15).fill(brandpartner); // Create an array of 15 identical images
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      if (carouselRef.current) {
+        carouselRef.current.scrollBy({
+          left: 7, // Scroll 1 pixel to the left
+          behavior: 'smooth',
+        });
+      }
+    }, 20); // Adjust the speed of scrolling by changing the interval
+
+    return () => clearInterval(scrollInterval); // Cleanup interval on unmount
+  }, []);
 
   return (
     <div className="py-20 bg-black">
@@ -14,21 +29,19 @@ const BrandPartners = () => {
         <p className="text-white lg:w-8/12 lg:mx-auto mb-8">
           Join us in partnership with leading brands that share our vision and commitment to excellence.
         </p>
-        
+
         {/* Carousel */}
-        <div className="partners-carousel">
-          {/* Left scrolling row */}
-          <div className="carousel-row left-scroll">
-            {partners.slice(4, 8).map((partner, index) => (
-              <img key={index} src={partner} alt={`Partner ${index + 9}`} className="partner-image" />
+        <div className="partners-carousel" ref={carouselRef}>
+          {/* Scrolling row */}
+          <div className="carousel-row">
+            {partners.map((partner, index) => (
+              <img key={index} src={partner} alt={`Partner ${index + 1}`} className="partner-image" />
             ))}
             {/* Duplicate the images for continuous scrolling */}
-            {partners.slice(11, 8).map((partner, index) => (
+            {partners.map((partner, index) => (
               <img key={index + partners.length} src={partner} alt={`Partner ${index + 1}`} className="partner-image" />
             ))}
           </div>
-          
-         
         </div>
       </div>
     </div>

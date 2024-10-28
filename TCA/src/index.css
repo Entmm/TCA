@@ -5,36 +5,26 @@
 /* src/components/BrandPartners.css */
 
 .partners-carousel {
-    position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to create a sliding effect */
+    white-space: nowrap; /* Keep images in a single line */
   }
   
   .carousel-row {
-    display: flex;
-    white-space: nowrap;
-    animation: scroll 100s linear infinite;
-  }
-  
-  .left-scroll {
-    animation-direction: normal; /* Scrolls left */
-  }
-  
-  .right-scroll {
-    animation-direction: reverse; /* Scrolls right */
+    display: inline-flex; /* Arrange images in a row */
+    animation: scroll 20s linear infinite; /* Continuous scrolling animation */
   }
   
   .partner-image {
-    width: 180px; /* Adjust based on your image size */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 30px; /* Add space between images */
+    width: 150px; /* Adjust the size as needed */
+    margin: 0 10px; /* Space between images */
   }
   
   @keyframes scroll {
-    0% {
-      transform: translateX(100%);
+    from {
+      transform: translateX(0); /* Start at the beginning */
     }
-    100% {
-      transform: translateX(-100%);
+    to {
+      transform: translateX(-50%); /* Scroll left by 50% of the container width */
     }
   }
   
